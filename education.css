@@ -1,0 +1,83 @@
+/* Custom Styles for Education Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 80px; /* Space for fixed navbar */
+  }
+  
+  /* Page Title */
+  .display-4 {
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lead {
+    color: #666;
+  }
+  
+  /* Table Styling */
+  .table-dark {
+    background-color: #2A2A72; /* Primary color */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .table-dark th,
+  .table-dark td {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .table-dark thead th {
+    background-color: #009FFD; /* Secondary color */
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Education Cards */
+  .education-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .education-card i {
+    color: var(--primary-color);
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    margin-top: 3rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .display-4 {
+      font-size: 2.5rem;
+    }
+  
+    .table-dark {
+      font-size: 0.9rem;
+    }
+  }

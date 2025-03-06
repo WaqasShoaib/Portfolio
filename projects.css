@@ -1,0 +1,66 @@
+/* Custom Styles for Projects Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 80px; /* Space for fixed navbar */
+  }
+  
+  /* Page Title */
+  .display-4 {
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .lead {
+    color: #666;
+  }
+  
+  /* Project Cards */
+  .project-card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+  
+  .project-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .project-card .card-body {
+    background: white;
+  }
+  
+  .project-card .btn-primary {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    border: none;
+  }
+  
+  .project-card .btn-primary:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    margin-top: 3rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .display-4 {
+      font-size: 2.5rem;
+    }
+  
+    .project-card img {
+      height: 150px;
+    }
+  }
