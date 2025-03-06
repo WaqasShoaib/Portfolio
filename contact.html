@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waqas Shoaib | Contact</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="css/styles.css"> <!-- Shared styles -->
+  <link rel="stylesheet" href="css/contact.css"> <!-- Page-specific styles -->
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark creative-nav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo.svg" alt="WS Logo" class="brand-logo">
+          <span class="logo-text">Waqas Shoaib</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container mt-5">
+    <!-- Page Title -->
+    <div class="text-center mb-5">
+      <h1 class="display-4 fw-bold">Get in Touch</h1>
+      <p class="lead text-muted">Let's work together!</p>
+    </div>
+
+    <!-- Alerts -->
+    <div id="alertContainer" class="mb-4">
+      <!-- Success Alert -->
+      <div id="successAlert" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+        <i class="fas fa-check-circle me-2"></i>Message sent successfully!
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+
+      <!-- Error Alert -->
+      <div id="errorAlert" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+        <i class="fas fa-exclamation-circle me-2"></i>Please fill all required fields!
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <form id="contactForm" class="needs-validation" novalidate>
+          <!-- Name Input -->
+          <div class="mb-4">
+            <label for="name" class="form-label">Name</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+              <input type="text" class="form-control" id="name" required>
+              <div class="invalid-feedback">
+                Please enter your name.
+              </div>
+            </div>
+          </div>
+
+          <!-- Email Input -->
+          <div class="mb-4">
+            <label for="email" class="form-label">Email</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+              <input type="email" class="form-control" id="email" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address.
+              </div>
+            </div>
+          </div>
+
+          <!-- Message Input -->
+          <div class="mb-4">
+            <label for="message" class="form-label">Message</label>
+            <div class="input-group">
+              <span class="input-group-text"><i class="fas fa-comment"></i></span>
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+              <div class="invalid-feedback">
+                Please enter your message.
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">
+              <i class="fas fa-paper-plane me-2"></i>Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer mt-5">
+    <div class="container text-center py-4">
+      <p class="mb-0">&copy; 2024 Waqas Shoaib. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Shared JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Contact Form Validation -->
+  <script>
+    (function () {
+      'use strict'
+
+      // Fetch the form and alerts
+      const form = document.getElementById('contactForm')
+      const successAlert = document.getElementById('successAlert')
+      const errorAlert = document.getElementById('errorAlert')
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault()
+        event.stopPropagation()
+
+        // Reset alerts
+        successAlert.classList.add('d-none')
+        errorAlert.classList.add('d-none')
+
+        if (form.checkValidity()) {
+          // Simulate form submission
+          successAlert.classList.remove('d-none')
+          form.reset()
+          form.classList.remove('was-validated')
+        } else {
+          errorAlert.classList.remove('d-none')
+          form.classList.add('was-validated')
+        }
+      }, false)
+    })()
+  </script>
+</body>
+</html>
